@@ -52,7 +52,7 @@ class Searcher:
         corpus = [self.dictionary.doc2bow(tokens) \
                     for tokens in content_tokens]
         self.tf_idf = gensim.models.TfidfModel(corpus)
-        self.sim = gensim.similarities.Similarity('RepoSearch/sim/',
+        self.sim = gensim.similarities.Similarity('RepoSearch/sim/matrix',
                     self.tf_idf[corpus],
                     num_features = len(self.dictionary))
 
