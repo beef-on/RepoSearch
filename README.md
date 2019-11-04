@@ -36,3 +36,7 @@ for content_file, score in similar_files:
     print("Score: {0}, Path: {1}".format(score, content_file.path))
 
 ```
+
+# Limitations
+
+- Since file contents are being read from GitHub and decoded into utf-8 encoding, repositories containing files that cannot be decoded / contain invalid bytes will error.
